@@ -18,12 +18,12 @@
 
 :root {
   /* Shades of grey color */
-  --light-grey-color: #ced4da;
-  --grey-color: #adb5bd;
-  --dark-grey-color: #495057;
+  --light-grey-color: #bdc4ca;
+  --grey-color: #8a9197;
+  --dark-grey-color: #575b5f;
 
   /* Shades of primary color */
-  --light-primary-color: ##91d3a9;
+  --light-primary-color: #d6efdf;
   --primary-color: #76c893;
   --dark-primary-color: #6ab484;
 
@@ -73,6 +73,24 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.headings {
+  margin-top: 8rem;
+  margin-bottom: 4.8rem;
+}
+
+.tertiary-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.secondary-heading {
+  font-size: 3.6rem;
+}
+
+.color-primary {
+  color: var(--primary-color);
 }
 
 /* Header */
@@ -196,6 +214,7 @@ button {
 .hero-center {
   height: calc(100vh - 8rem);
   display: grid;
+  align-items: center;
   gap: 3.2rem 4.8rem;
 }
 
@@ -218,16 +237,68 @@ button {
 }
 
 .hero-image-container img {
-  transition: var(--transition);
-}
-
-.hero-image-container img:hover {
-  transform: scale(1.1);
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
+  .hero-image-container img {
+    display: block;
+    transition: var(--transition);
+  }
+
+  .hero-image-container img:hover {
+    transform: scale(1.1);
+  }
   .hero-center {
     grid-template-columns: 1fr 45rem;
     align-items: center;
+  }
+}
+
+/* Features Section */
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.feature {
+  display: grid;
+}
+
+.feature-img {
+  display: none;
+}
+
+.feature-logo {
+  color: var(--dark-primary-color);
+  background-color: var(--light-primary-color);
+  padding: 1.6rem;
+  border-radius: 100%;
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.feature-heading {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--grey-color);
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    grid-template-columns: 45rem 40rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .feature-img {
+    display: block;
   }
 }
