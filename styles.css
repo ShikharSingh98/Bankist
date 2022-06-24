@@ -228,6 +228,14 @@ button {
 .hero-center {
   height: calc(100vh - 8rem);
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
 .hero-heading {
@@ -240,23 +248,21 @@ button {
 }
 
 .hero-description {
-  margin-top: 2.4rem;
   font-size: 1.6rem;
 }
 
-.hero-image-container {
-  overflow: hidden;
+.hero-link:link,
+.hero-link:visited {
+  margin-top: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--dark-primary-color);
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-.hero-image-container img {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-center {
-    justify-content: center;
-    align-items: center;
-  }
+.hero-link:hover,
+.hero-link:active {
+  color: var(--primary-color);
 }
 
 /* Features Section */
