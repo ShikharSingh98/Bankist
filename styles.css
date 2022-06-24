@@ -148,13 +148,16 @@ button {
   margin-top: 3.2rem;
 }
 
+.navbar-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
 .navbar-links {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  height: 0;
-  overflow: hidden;
-  transition: var(--transition);
 }
 
 .navbar-link:link,
@@ -168,10 +171,6 @@ button {
 .navbar-link:hover,
 .navbar-link:active {
   color: var(--primary-color);
-}
-
-.show-links {
-  height: 15rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -189,8 +188,11 @@ button {
     margin-top: 0;
   }
 
+  .navbar-container {
+    height: auto !important;
+  }
+
   .navbar-links {
-    height: auto;
     flex-direction: row;
     align-items: center;
   }
