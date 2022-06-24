@@ -448,3 +448,32 @@ button {
     justify-content: space-between;
   }
 }
+
+/* Signup-section */
+
+.signup-center {
+  padding: 12.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.signup-center h2 {
+  max-width: 85rem;
+  text-align: center;
+}
+
+.signup-center button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1.6rem 3.2rem;
+  font-size: 2rem;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.signup-center button:hover {
+  background-color: var(--dark-primary-color);
+}
