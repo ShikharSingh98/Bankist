@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-center">
         <div class="brand">
           <i class="fa-solid fa-piggy-bank brand-logo"></i>
@@ -30,13 +30,13 @@
         <div class="navbar-container">
           <ul class="navbar-links">
             <li>
-              <a class="navbar-link" href="#">Features</a>
+              <a class="navbar-link scroll-link" href="#features-section">Features</a>
             </li>
             <li>
-              <a class="navbar-link" href="#">Operations</a>
+              <a class="navbar-link scroll-link" href="#operations-section">Operations</a>
             </li>
             <li>
-              <a class="navbar-link" href="#">Testimonials</a>
+              <a class="navbar-link scroll-link" href="#testimonials-section">Testimonials</a>
             </li>
             <li>
               <a class="navbar-link cta-button" href="#">Open Account</a>
@@ -55,7 +55,7 @@
         </article>
       </section>
       <!-- Features Section -->
-      <section class="feature-center" id="feature-section">
+      <section class="feature-center" id="features-section">
         <header class="headings">
           <h3 class="tertiary-heading color-primary">Features</h3>
           <h2 class="secondary-heading">Everything you need in a modern bank and more.</h2>
@@ -94,7 +94,7 @@
         </div>
       </section>
       <!-- Operations Section -->
-      <section class="operations-center">
+      <section class="operations-center" id="operations-section">
         <header class="headings">
           <h3 class="tertiary-heading color-primary">Operations</h3>
           <h2 class="secondary-heading">Everything as simple as possible, but no simpler.</h2>
@@ -133,7 +133,7 @@
         </div>
       </section>
       <!-- Testimonials Section -->
-      <section class="testimonials-center">
+      <section class="testimonials-center" id="testimonials-section">
         <header class="headings">
           <h3 class="tertiary-heading color-primary">Not sure yet?</h3>
           <h2 class="secondary-heading">Millions of Bankists are already making their lifes simpler.</h2>
@@ -201,6 +201,10 @@
       <i class="fa-solid fa-piggy-bank footer-logo"></i>
       <p class="copyright">All rights reserved &copy; Bankist <span class="copyright-date"></span></p>
     </footer>
+    <!-- Top button -->
+    <a href="#header" class="top-button">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
     <script src="./script.js"></script>
   </body>
 </html>

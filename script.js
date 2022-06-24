@@ -19,3 +19,14 @@ const copyrightDate = document.querySelector('.copyright-date');
 
 const currentYear = new Date().getFullYear();
 copyrightDate.textContent = currentYear;
+
+//Show top
+const topButton = document.querySelector('.top-button');
+window.addEventListener('scroll', function () {
+  const scrollHeight = window.scrollY;
+  if (scrollHeight > 200) {
+    topButton.classList.add('show-top-button');
+  } else {
+    topButton.classList.remove('show-top-button');
+  }
+});
