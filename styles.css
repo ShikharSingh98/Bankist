@@ -227,9 +227,7 @@ button {
 
 .hero-center {
   height: calc(100vh - 8rem);
-  display: grid;
-  align-items: center;
-  gap: 3.2rem 4.8rem;
+  display: flex;
 }
 
 .hero-heading {
@@ -255,16 +253,8 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-image-container img {
-    display: block;
-    transition: var(--transition);
-  }
-
-  .hero-image-container img:hover {
-    transform: scale(1.1);
-  }
   .hero-center {
-    grid-template-columns: 1fr 45rem;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -460,7 +450,7 @@ button {
 }
 
 .signup-center h2 {
-  max-width: 85rem;
+  max-width: 75rem;
   text-align: center;
 }
 
@@ -468,12 +458,71 @@ button {
   background-color: var(--primary-color);
   color: var(--white-color);
   padding: 1.6rem 3.2rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 3px;
   font-weight: 700;
   transition: var(--transition);
+  box-shadow: var(--light-box-shadow);
 }
 
 .signup-center button:hover {
   background-color: var(--dark-primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .signup-center button {
+    font-size: 2rem;
+  }
+}
+
+/* Footer */
+
+.footer-center {
+  padding: 8rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+  border-top: 1.5px solid rgba(233, 233, 233, 0.4);
+  background-color: var(--light-primary-color);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--dark-grey-color);
+  transition: var(--transition);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--primary-color);
+}
+
+.footer-logo {
+  font-size: 2.4rem;
+  color: var(--dark-primary-color);
+  transform: rotate(-10deg);
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--grey-color);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-links {
+    gap: 2.4rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.6rem;
+  }
 }
