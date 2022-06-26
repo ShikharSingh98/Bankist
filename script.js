@@ -67,3 +67,19 @@ function slideTestimonails(counter) {
     testimonail.style.transform = `translateX(-${counter * 100}%)`;
   });
 }
+
+// Modal
+
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const openModalBtns = document.querySelectorAll('.cta-button');
+const modal = document.querySelector('.modal');
+
+openModalBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    modal.classList.add('show-modal');
+  });
+});
+
+modalCloseBtn.addEventListener('click', function () {
+  modal.classList.remove('show-modal');
+});
