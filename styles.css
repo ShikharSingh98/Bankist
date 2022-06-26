@@ -587,7 +587,7 @@ button {
   padding: 2.4rem;
   border-radius: 3px;
   box-shadow: var(--light0-box-shadow);
-  max-width: 45rem;
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -604,7 +604,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
-  width: 35rem;
+  width: 100%;
 }
 
 .form-group {
