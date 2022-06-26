@@ -361,9 +361,23 @@ button {
   color: var(--primary-color);
 }
 
-.testimonial {
-  max-width: 70rem;
+.testimonials {
+  position: relative;
+  max-width: 95vw;
+  min-height: 50vh;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  transition: var(--transition);
 }
 
 .testimonial .text {
@@ -387,30 +401,13 @@ button {
 .testimonial-author-name {
   font-size: 1.4rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 .testimonial-author-place {
   font-size: 1.2rem;
   color: var(--grey-color);
-}
-
-.dots {
-  margin: 3.2rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.dot {
-  background-color: var(--light-grey-color);
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.active-dot {
-  background-color: var(--grey-color);
+  text-transform: capitalize;
 }
 
 .testimonial-buttons {
@@ -435,13 +432,18 @@ button {
 }
 
 @media screen and (min-width: 992px) {
-  .testimonials {
+  .testimonials-container {
     position: relative;
+  }
+
+  .testimonials {
+    max-width: 55vw;
+    height: 35vh;
   }
 
   .testimonial-buttons {
     margin-top: 0;
-    width: 90%;
+    width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

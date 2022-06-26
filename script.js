@@ -30,3 +30,40 @@ window.addEventListener('scroll', function () {
     topButton.classList.remove('show-top-button');
   }
 });
+
+// Testimonails Slider
+const testimonails = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('#prev-btn');
+const nextBtn = document.querySelector('#next-btn');
+
+testimonails.forEach(function (testimonail, index) {
+  testimonail.style.left = `${index * 100}%`;
+});
+
+let counter = 0;
+
+nextBtn.addEventListener('click', function () {
+  counter++;
+  if (counter < 3) {
+    slideTestimonails(counter);
+  } else {
+    counter = 0;
+    slideTestimonails(counter);
+  }
+});
+
+prevBtn.addEventListener('click', function () {
+  counter--;
+  if (counter >= 0) {
+    slideTestimonails(counter);
+  } else {
+    counter = testimonails.length - 1;
+    slideTestimonails(counter);
+  }
+});
+
+function slideTestimonails(counter) {
+  testimonails.forEach(function (testimonail) {
+    testimonail.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
